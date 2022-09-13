@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	</head>
+	<body style="background-color:#99ccff">
+		<h1 style="background-color:#cc00ff; font-size:70px"><i>DOOM</i></h1>
+		<IMG SRC="https://image.api.playstation.com/vulcan/ap/rnd/202009/2814/GGyEnCkIXoyiVlN9sRHkzUPo.png"; height="500"; width="500"; ALIGN=MIDDLE>
+		<h2 style="background-color:#3399ff"><ins>guau</ins></h2>
+		<img src="https://media1.giphy.com/media/U2nN0ridM4lXy/giphy.gif?cid=ecf05e47y0mj5eotk7k6yt6llbcqxf1n3lhiwxt2x7hlrzac&rid=giphy.gif&ct=g" alt="Funny image"; ALIGN=MIDDLE>
+		<h3 style="background-color:#ff9933">muu</h3>
+		 
+		<!--h1,h2-h6 son etiquetas para comentarios -->
+		<!-- 
+		<b> - Bold text
+		<strong> - Important text
+		<i> - Italic text
+		<em> - Emphasized text
+		<mark> - Marked text
+		<small> - Smaller text
+		<del> - Deleted text
+		<ins> - Inserted text
+		<sub> - Subscript text
+		<sup> - Superscript text 
+		-->
+		<p style="background-color:#66ff33; font-size:50px;"><ins>El gato dice miau</ins></p>
+		
+		<h2 style="background-color:#3399ff">formating elements guau!</h2>
+		<ol>
+			<li><b> &lt; b &gt; - Bold text</b></li>
+			<li><strong> &lt;strong&gt; - Important text</strong></li>
+			<li><i> - &lt;i&gt; Italic text</i></li>
+			<li><em> - &lt;em&gt; Emphasized text</em></li>
+			<li><mark> - &lt;mark&gt; Marked text</mark></li>
+		</ol>
+		<ul>
+			<li><small> &lt; small &gt;- Smaller text</small></li>
+			<li><del> &lt; del &gt;- Deleted text</del></li>
+			<li><ins> &lt; ins &gt;- Inserted text</ins></li>
+			<li><sub>&lt; sub &gt; - Subscript text</sub></li>
+			<li><sup> &lt; sup &gt;- Superscript text </sup></li>
+		
+		</ul>
+	</body>
+</html>
