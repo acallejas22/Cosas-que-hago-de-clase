@@ -79,3 +79,24 @@ hombre:
 AA - calvo
 Aa - calvo
 aa - no calvo
+
+
+Genética de poblaciones:
+
+
+Prevalencia: probabilidad de manifestarse una enfermedad en una población.
+
+prevalencia enfermedad x = 1/20000
+enfermedad esta al cromosoma=21
+A alelo sano
+a alelo enfermo
+
+1/20000=p(a)*p(a)--> probabilidad de a recesivo por probabilidad de a recesivo
+p(a)=r(1/20000)-->raiz cuadrada de 1/20000
+p(a)=0,007
+p(A)=1-0,007 = 0,993
+p(a)+p(A) = 1
+p(a)=q
+p(A)=p
+p+q=1
+p^2+2pq+q^2=1 
