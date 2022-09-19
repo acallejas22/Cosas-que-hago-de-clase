@@ -1,5 +1,17 @@
-h1, h2, h3{
-
+h1, h2, h3 {
 	color: green;
-
+	
 	} 
+	table{
+		border-collapse: collapse;
+		
+	}
+	td, th {	
+		
+		border: 1px solid #dddddd;
+		border-collapse: collapse;
+		width: 50%;
+		padding:8px;
+		telt-align: left;
+	}
+	
