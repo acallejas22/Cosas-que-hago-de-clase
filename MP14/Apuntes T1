@@ -10,29 +10,72 @@ Gen: conjunto de material genetico incluido en el cromosoma.
 El genoma entero contiene 3 mil milones de pares de bases (los pares de nucleotidos como [A-T, G-C, T-C, A-C, G-A]).
 Fenotipo: expresión genética visual de un ser vivo.
 Genotipo: la combinación de los genes, diferente del fenotipo, porque el fenotipo es el resultado.
+Autosómico: los dos cromosomas homólogos son iguales
 
 
 Diagrama de Punnet:
 
-ES una tabla que te permite predecir la herencia genética
+Es una tabla que te permite predecir la herencia genética
 El gen A es dominante, el gen a es recesivo(da igual la letra, el gen en mayúscula es dominante y en minúscula es recesivo).
 Ejemplo: UN barón con los alelos AA  del cabello castaño y una hembra con los alelos aa del cabello pelirrojo 
 https://www.cultura10.com/wp-content/uploads/2011/12/cuadro-punnett.jpg
 
-Primera ley de Mendel:
+Primera ley de Mendel: Uniformidad
 
 Retoño homocigoto dominante: combinación de alelos dominantes AA.
 Retoño homocigoto recesivo: combinación de alelos recesivos aa.
 Retoño heterocigoto: combinación de alelos dominantes Aa o aA.
 Si se juntan 2 individuos puros(tienen la combinación genetica de alelos homogenia, es decir, AA o aa), tendrán el 100% de crias heterocigotas.
 
-Segunda ley de Mendel:
+Segunda ley de Mendel: Segregación
 
 Una hembra con los alelos recesivos aa y un macho con los alelos dominantes AA se reproducen y tienen 4 retoños Aa, 
-esos retoños Aa se reproducen con seres de diferentye sexo con los alelos heterogeneos Aa y dan lugar a retoños Aa en su mayoría, pero tambien retoños homogeneos aa o AA,
+esos retoños Aa se reproducen con seres de diferentye sexo con los alelos heterogeneos Aa y dan lugar a 
+retoños Aa en su mayoría, pero tambien retoños homogeneos aa o AA,
 esto da lugar a "la segunda generación filial".
 
 Coodominancia:
 
-Si el genotipo da el 100 % de alelos dominantes que sean de diferentes padres, la primera generación dará lugar a una combinación de las caracteróisticas de los 2 padres.
-Ejemplo: Flor roja con alelos dominantes VV y flor amarilla con alelos dominantes GG, darán lugar a 4 combinaciones GV y VG, ambos alelos dominantes que se expresan a la vez.
+Si el genotipo da el 100 % de alelos dominantes que sean de diferentes padres, 
+la primera generación dará lugar a una combinación de las caracteróisticas de los 2 padres.
+Ejemplo: Flor roja con alelos dominantes VV y flor amarilla con alelos dominantes GG, 
+darán lugar a 4 combinaciones GV y VG, ambos alelos dominantes que se expresan a la vez.
+
+
+Herencia liagada al sexo:
+
+Nos explica la herencia de las enfermedades ligadas a los cromosomas, normalmente, 
+el género masculino está expuesto mucho más a las enfermedades de este tipo. ya que
+tiene los cromosomas xy y la hembra el xx, la mujer tendrá que tener los 2 cromosomas corruptos
+para que la enfermedad haga presencia, sin embargo, el hombre solo tendrá que tener la enfermedad 
+en un cromosomapara que esta haga presencia.
+
+Cromosoma X
+Cromosoma Y
+
+daltonismo:
+
+x --> cromosoma sano
+x* --> cromosoma corrupto
+
+y --> cromosoma neutro
+
+xx --> mujer sana
+xx* --> mujer portadora
+x*x* --> mujer enferma
+xy --> hombre sano
+x*y --> hombre enfermo
+
+
+Cromosoma autosómico Aa:
+
+Calvicie:
+mujer:
+AA - no calva
+Aa - no calva
+aa - calva
+
+hombre:
+AA - calvo
+Aa - calvo
+aa - no calvo
