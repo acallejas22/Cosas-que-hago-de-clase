@@ -1,0 +1,36 @@
+lista={1,2,3}--> cada valor tiene un recuento, y en programación se cuenta a partir de 0,
+es decir, en la lista, 1 sería igual al 0 en recuento, 2 al 1 y 3 al 2, en la posición 0 está el 1,
+en la posición 1 está el 2 y en la posición 2, está el 3.
+lista [2]: está pidiendo que muestre el 2 elemento, en este caso es el 3.
+lista[<2]: está pidiendo que mostremos los elementos por debajo del 2 elemento, en este caso, es el 2 y el 1.
+
+
+SELECT: sirve para seleccionar algo.
+SELECT * from persona: en este caso, hay una tabla persona, que tiene atributos.
+LIMIT 5; --> indica que el límite está en el 5 elemento de la tabla, es decir, 
+se cogen los 5 primeros elementos de la tabla.
+
+
+SELECT * from persona
+WHERE dni LIKE '%7'; --> esto nos dice que cojeremos desde el elemento 0 hasta el 7.
+
+
+SELECT * from persona
+WHERE dni LIKE '%7%'; --> esto nos dice que coge los registros en la tabla persona que contengan un 7.
+SELECT dni from persona --> en este caso, cogería los dni como registtros. 
+
+SELECT * from persona
+WHERE dni LIKE '___7_____'; --> nos intenta coger el elemento que escribimos en la posición que la hemos escrito en la tabla de registros,
+pero en este caso, el 7 está en la posición 3 y nosotros lo hemos buscado en la posición 4.
+
+SELECT * from persona
+WHERE dni  '4178888A'; --> se coge un registro en concreto.
+
+
+Base de datos: consultar, gestionar y compartir datos de forma instantánea.
+
+
+En una tabla, no todos pueden ver todos los datos. Por ejemplo, un programador no podrá ver el DNI, la dirección e o el número de teléfono de los usuarios
+que estan en la tabla, un usuario no podrá ver el DNI, la dirección, el género, el número y quizás los nombres y los apellidos de los usuarios.
+El administrador podrá ver todos los dats, ya que es el administrador y tiene todos los privilegios.
+
