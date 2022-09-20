@@ -1,0 +1,5 @@
+I) D(DNI)=[00000000T,99999999R]
+II) D(Nombre)= {Isabel,...,Adrian} A={1,2,3,4,5} B={1,1,1,2,3}X B={1,3,2}
+III) D(Telefono)=[+34 600 00 00 00, +34 799 99 99 99]
+IV) D(Genero)={Mujer,Hombre}
+V) D(Data de nacimiento)=(1977,2006) 
