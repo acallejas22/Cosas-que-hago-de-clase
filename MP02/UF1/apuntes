@@ -34,3 +34,8 @@ En una tabla, no todos pueden ver todos los datos. Por ejemplo, un programador n
 que estan en la tabla, un usuario no podrá ver el DNI, la dirección, el género, el número y quizás los nombres y los apellidos de los usuarios.
 El administrador podrá ver todos los dats, ya que es el administrador y tiene todos los privilegios.
 
+Cada fila es un registro.
+()--> sirve para aislar, ej(1977,2006)--> te muetrsa desde el 1978 hasta el 2005.
+[]-->indicar un intervalo, ej[1,3], te muetsra del 1 al 3.
+{}--> indican elementos concretos/específicos, ej {hombre, mujer, nobinario}.
+
