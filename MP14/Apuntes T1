@@ -100,3 +100,32 @@ p(a)=q
 p(A)=p
 p+q=1
 p^2+2pq+q^2=1 
+
+
+Síndrome de Lynch:
+
+
+-En una población determinada, tenemos, que la prevalenciapor el sídrome de Lynch
+es de 1/440
+
+-Es una enfermedad autosómica recesiva, es decir, aa.
+
+-Autosomico: que viene de los cromosomas que no son sexuales.
+
+-La enfermedad, se expresa con el gentipo aa.
+
+-Probabilidad del genotipo aa es de 1/440, también llamado como (prevalencia).
+
+-Probabilidad de tener un alelo a?
+  Población de 5000 habitantes:
+  p(a)=q --> p(aa)=q^2 --> 1/440=0,0022 --> q=sqrt 0,0022 --> q = 0,0469
+  p(A)=p -->p(A) + p(a)=q --> p+q =1 --> 1-0,0469 --> p=0,9531/
+  
+  p(AA) + p(Aa) + p(aA) + p(aa) = 1
+  p^2+2pq+q^2=0,9531^2+2(0,9531*0,0469) + 0,0469^2 --> 0,908+0,089+0,0022=0,9992 --> 90,8% niños sanos, 8,9% niños portadores y 0,22% niños enfermos. 
+  90,8% de 5000 = 4540 AA
+  8,9% de 5000 = 445 Aa
+  0,22% de 5000 = 11 aa
+  
+  
+  
