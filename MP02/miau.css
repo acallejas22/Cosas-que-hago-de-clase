@@ -4,14 +4,22 @@ h1, h2, h3 {
 	} 
 	table{
 		border-collapse: collapse;
-		
+		width: 60%;
 	}
-	td, th {	
+	th {	
 		
 		border: 1px solid #dddddd;
 		border-collapse: collapse;
-		width: 50%;
+		width: 100%;
+		padding:8px;
+		telt-align: middle;
+	}
+	td{
+		border: 1px solid #dddddd;
+		border-collapse: collapse;
+		width: 10%;
 		padding:8px;
 		telt-align: left;
+	
 	}
 	
