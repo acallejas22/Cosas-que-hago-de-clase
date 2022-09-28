@@ -90,3 +90,35 @@ Atributo calculado/derivado: Cuando su valor se puede calcular a través de otro
 Su patrón es una elipse con linea discontinua.
 
 La clave primaria se indica subrayandola, también puede ser 1 o un conjunto de atributos.
+La interrelación es la asociación entre 2 o más entidades.
+Interrelaciones: pueden ser binarias, terciarias, cuatrnarias...
+Autorrelación: La misma entidad se relaciona con la misma entidad.
+Las interrelaciones pueden tener atributos.
+
+Cardinalidad:
+(1:1) --> uno a uno
+(1:n) --> uno a muchos
+(n:1) --> muchos a uno
+(n:m) --> muhcos a muchos
+1 = -->
+n = -->> o (nada)
+
+Si queremos denotar que una interrelación es incontable usaremos "*".
+símbolo "-" en la flecha :la entidad es obligatoria en la interrelación.
+O en la flecha :indica que la entidad es opcionoal en la interrelación.
+
+Cardinalidad:
+0= opcional
+n= mucho
+primer 1= obligatorio
+segundo 1= uno
+
+si tenemos n interrelaciones, el número de combinaciones será n+1.
+Ej: n = 5, tendremos 6 combinaciones(5+1=6).
+
+
+Interrelación recursiva:
+Una autorrelación que se llama asi misma y se lee de manera pre y post.
+Pre: Lo primero que se lee de la autorrelación.
+Post: Lo segundo que se lee de la autorrelación.
+
