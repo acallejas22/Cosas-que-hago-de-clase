@@ -34,6 +34,8 @@ En una tabla, no todos pueden ver todos los datos. Por ejemplo, un programador n
 que estan en la tabla, un usuario no podrá ver el DNI, la dirección, el género, el número y quizás los nombres y los apellidos de los usuarios.
 El administrador podrá ver todos los dats, ya que es el administrador y tiene todos los privilegios.
 
+
+
 Cada fila es un registro.
 ()--> sirve para aislar, ej(1977,2006)--> te muetrsa desde el 1978 hasta el 2005.
 []-->indicar un intervalo, ej[1,3], te muetsra del 1 al 3.
@@ -61,3 +63,30 @@ Nodos en BBDD:
 Nodo jerñárquico: Tienen una raiz y las hojas pueden tener un padre solo.
 Nodo en red: Tienen una raiz, pero las hojas pueden tener más de un padre.
 
+Modelo de diagrama de BBDD ER, creado por el Dr. Peter Shan Chen:
+
+Bases de datos relacionales
+Las entidades se pondrán en mayúscula, serán en singular y  su pulsador es un rectángulo.
+Los atributos se ponen normal (sin carácteres especiales) e irán con un recuadro en forma de elipse.
+
+Cuando hablamos de dominio, se hará de forma global (todos los casos posibles, no se excluye nada).
+Dentro de los atributos, podremos tener atributos simples o atributos compuestos.
+Atributos simple: no se divide el valor que tiene.
+Atrubitos complejos: el valor que tiene se divide, como el apellido.
+Un atributo puede ser monoevaluado o multievaluado.
+Monoevaluado:  Hay un valor por cada instancia. --> va con 1 elipse 
+Multievaluado: Hay más de un valor por cada instancia(puiedes tener más de un teléfono). --> va con 2 elipses.
+
+Primer 1 --> Obligatorio poner un valor.
+Segundo 1 --> Únicamente se puede poner 1 valor.
+n: Que puede tener muchos valores.
+0: Opcional poner valores.
+(1,1) monoevaluado obligatorio.
+(0,1) monoevaluado opcional.
+(1,n) multievaluado obligatorio.
+(0,n) multievaluado opcional.
+
+Atributo calculado/derivado: Cuando su valor se puede calcular a través de otros atributos u otras entidades interrelacionadas.
+Su patrón es una elipse con linea discontinua.
+
+La clave primaria se indica subrayandola, también puede ser 1 o un conjunto de atributos.
