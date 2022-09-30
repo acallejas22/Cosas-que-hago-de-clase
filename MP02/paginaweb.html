@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
+		<title>Doom</title>
 		<link rel="icon" type="image/x-icon" href="imagen/favicon.ico">
 		<style> /* CSS INTERN */
 			li  {
@@ -8,6 +9,12 @@
 			}
 		</style>
 		<link rel="stylesheet" href="css/miau.css">
+		<meta charset="UTF-8">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="description" content="Miau">
+		<meta name="author" content="Adri">
+		<meta http-equiv="refresh" content="30">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body style="background-color:#fafafa">
 				<marquee  direction="left" scrolldelay="60" scrollamount="5"   loop="infinite">
@@ -44,19 +51,19 @@
 		<p style="background-color:#66ff33; font-size:50px;"><ins>El gato dice miau</ins></p>
 		
 		<h2 style="background-color:#3399ff">formating elements guau!</h2>
-		<ol>
+		<ol type="I">
 			<li><b> &lt; b &gt; - Bold text</b></li>
 			<li style="background-color:#ff0000"><strong> &lt;strong&gt; - Important text</strong></li>
 			<li style="background-color:#ff0000" ><i> - &lt;i&gt; Italic text</i></li>
 			<li style="background-color:#ff0000"><em> - &lt;em&gt; Emphasized text</em></li>
 			<li style="background-color:#ff0000"><mark> - &lt;mark&gt; Marked text</mark></li>
 		</ol>
-		<ul>
-			<li style="background-color:#ff0000"><small> &lt; small &gt;- Smaller text</small></li>
-			<li style="background-color:#ff0000"><del> &lt; del &gt;- Deleted text</del></li>
-			<li style="background-color:#ff0000"><ins> &lt; ins &gt;- Inserted text</ins></li>
-			<li style="background-color:#ff0000"><sub>&lt; sub &gt; - Subscript text</sub></li>
-			<li style="background-color:#ff0000"><sup> &lt; sup &gt;- Superscript text </sup></li>
+		<ul style="list-style-type:circle;">
+			<li class="bgorange newclass" id="idLi"><small> &lt; small &gt;- Smaller text</small></li>
+			<li class="bgorange"><del> &lt; del &gt;- Deleted text</del></li>
+			<li class="bgorange"><ins> &lt; ins &gt;- Inserted text</ins></li>
+			<li class="bgorange"><sub>&lt; sub &gt; - Subscript text</sub></li>
+			<li class="bgorange"><sup> &lt; sup &gt;- Superscript text </sup></li>
 		
 		</ul>
 		<h2 style="background-color:#3399ff"> blockquote, q, abbr, address, cite, bdo. Guau guau!!!</h2>
@@ -171,7 +178,37 @@
 				
 				
 			</tr>
+			
+				
+			
 		</table>
+		<iframe width="420" height="315"
+			src="https://www.youtube.com/embed/3XYQVOFn-0Q">
+		
+			</iframe>
+			<h2 style="background-color:#3399ff">listas guau</h2>
+				<dl>
+					<dt>miau</dt>
+					<dd>guau</dd>
+				</dl>
+		<p id="p1" class="myp">	</p>	
+		<p id="p2" class="myp">	</p>
+		<p id="p3" class="myp">	</p>	
+		<button onclick="displayResult()">Change text</button>
+		<script>
+		function displayResult() {
+		/*OP1*/
+		  document.getElementById("p1").innerHTML = "p1";
+		  document.getElementById("p2").innerHTML = "p2";
+		  document.getElementById("p3").innerHTML = "p3";
+		  /*OP2*/
+		  document.getElementById("myp")[0].innerHTML = "p1";
+		  document.getElementById("myp")[1].innerHTML = "p2";
+		  document.getElementById("myp")[2].innerHTML = "p3";
+		}
+		</script>	
+		<h2 style="background-color:#3399ff">iframe guau</h2>
+		
+		<iframe src="https://www3.animeflv.net/" title="wikidex" width="100%" height="400px">wikidex</iframe>
 	</body>
 </html>
-
