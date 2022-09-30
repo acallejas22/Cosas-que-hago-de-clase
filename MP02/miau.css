@@ -15,11 +15,32 @@ h1, h2, h3 {
 		telt-align: middle;
 	}
 	td{
+		
 		border: 1px solid #dddddd;
 		border-collapse: collapse;
 		width: 10%;
 		padding:8px;
-		telt-align: left;
+		telt-align: middle;
 	
 	}
+	
+	/*
+	ul´{
+		list-style-type:circle;
+		
+	}
+	
+	*/
+	img{
+		width: 30%
+	}
+	/*CLASS*/
+	.bgorange{
+		background-color: yellow;	
+	}
+/*ID*/
+#idLi{
+	color:blue;
+}
+
 	
