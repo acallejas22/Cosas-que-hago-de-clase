@@ -122,3 +122,68 @@ Una autorrelación que se llama asi misma y se lee de manera pre y post.
 Pre: Lo primero que se lee de la autorrelación.
 Post: Lo segundo que se lee de la autorrelación.
 
+Entidades debiles:
+Forma de representación, un cuadrado encima de otro cuadrado.
+Una entidad que depende de otra entidad.
+Su clave se llama atributo discriminante.
+
+clave primaria de entidad debil:
+Forma de representacióin: Subrayando la palabra con línea discontinua.
+
+Como se crea una entidad:
+
+1r paso:
+Montar el esqueleto.
+Poner todas las entidades e integraciones.
+
+2o paso:
+Poner la cardinalidad de cada integración.
+Añadir restricciones de partición.
+
+3r paso:
+Añadir todos los tipos de atributps
+
+Extender entidades:
+Su símbolo es un triángulo boca abajo.
+Los hijos heredan los atributos de los padres
+Se representa con "ES".
+
+Especialización:
+Podemos dividir una entidad "superclase" en varias entidades.
+
+Generalización:
+A partir de algunas entidades, obtenemos una general.
+
+Restricciones de extensiones :
+hay dos tipos, disjuntas o solapadas.
+
+Disjunta:
+cuando hay una instancia persona y solamente puede ser profesor o alumno, no podrá ser a la vez profesor y alumno.
+Se representa con "D".
+
+Solapada/Total:
+Cuando hay una instancia persona y puede ser profesor y alumno a la vez.
+Se representa con "E".
+
+Total:
+todos son o profesroes o todos alumnos(entidades).
+Se representa con "T".
+Si hay 100 entidades, se repartirán por la mitad a ser profersores o alumnos.
+
+Parcial:
+Todas las personas se pueden dividir entre profersor y alumn(entidades)
+Se representa con "P".
+Si hay 100 entidades, se repartirán se pueden partir a conveniencia en profersores o alumnos y la suma de todas las instancias, no será el total, es decir, 
+no serán 100 personas los profesores y alumnos.
+
+Agregación:
+Cuando hay redundancia en interrelaciones, se considerará como una entidad  una interrelacón dentor de la redundancia para que etsa desaparezca. 
+
+Todas las entidades se convierten en tablas/relaciones/tuplas.
+cunado es una relacion binaria, se crea una nueva clave foranea(claveprimaria de la otra entidad que se pone en la tabla/relación)
+si tenemso (n,n) en l relacion binaria, se crea una nueva relación.
+
+clave foranea:
+clave de la otra entidad, que se añade a la otra entidad(el atributo ha de ser único).
+Conectividad 1:1 ha de ser para que exista clave foranea.
+Cuando la interrelación es (n:n), la clave foranea será la combinación de los atributos únicos de las entidades interrelacionadas.
