@@ -1,0 +1,199 @@
+String printBinary(String binary, int blockSize, String separator) {
+        List<String> result = new ArrayList<>();
+        int index = 0;
+        while (index < binary.length()) {
+            result.add(binary.substring(index, Math.min(index + blockSize, binary.length())));
+            index += blockSize;
+        }
+
+        return result.stream().collect(java.util.stream.Collectors.joining(separator));
+    }
+void intToBin(int input){
+    String result = Integer.toBinaryString(input);
+    String resultWithPadding = String.format("%32s", result).replaceAll(" ", "0");
+    System.out.println(printBinary(resultWithPadding, 4, " ")); 
+}
+Type: Exercici Pràctic
+Programming Language: Java
+Tools: notebook, git
+Contents: Variables, tipus de dades primitius i operadors a Java
+Exercici: Variables, tipus de dades primitius i operadors a Java
+En aquest exercici haureu de respondre les següents preguntes, substituint allà on posi //TODO per la vostra resposta.
+
+Preguntes
+Pregunta 1
+Declara dues variables de tipus byte, b0 i b1, i assigna-lis respectivament els valors 122 i 14:
+
+byte b0 = 122; byte b1 = 14;
+Suma les dues variables, sense assignar el resultat a cap variable (jshell l'assignarà automàticament a un variable temporal, que comença per $):
+
+b0 + b1
+Quin resultat obtenim? Per què? De quin tipus de dada és la variable temporal creada pel notebook?
+
+long b0 = 122; long b1 = 1;//123
+int r = (int)(b0 + b1);
+print(r);
+123
+//TODO
+
+Pregunta 2
+Declara una variable de tipus char anomenada c, i assignali el valor 'a':
+
+char c = 'a';
+Declara una variable de tipus int, anomenada n, i assigna-li el valor de la variable c:
+
+int n = c;
+Quin resultat obtens? Per què?
+
+//TODO
+
+Ara, declara una variable de tipus short, anomenada s, i assigna-li el valor de la variable c:
+
+short s = c;
+Per què ara el resultat obtingut és diferent que en el cas anterior?
+
+//TODO
+
+Pregunta 3
+Continuant amb les variables de tipus char i short declarades a l'exercici 2, ara executeu:
+
+short s = (short)c;
+Com s'anomena això que estem fent amb la variable c? Quin resultat obtenim ara? Per què (què està passant)?
+
+//TODO
+
+Pregunta 4
+Executa el següent codi en una cel·la del notebook:
+
+short s = (short)32000;
+short s = (short)35000;
+Quins resultats obtens? Per què?
+
+//TODO
+
+La meva resposta és que......
+
+short s = (short)32000;
+println(s);
+
+short s = (short)35000;
+
+print(s);
+32000
+-30536
+Pregunta 5
+Executa el següent codi amb el jshell:
+
+var v = 5.0;
+var v0 = 5;
+De quin tipus de dada són les variables v i v0?
+
+//TODO
+
+Ara, executa:
+
+var v1 = v + v0;
+De quin tipus de dada és la variable v1? Per què (què està passant en fer-se la suma)?
+
+//TODO
+
+var b = 65;
+println(b);
+b = 'B';
+println(b);
+
+var a = 'A';
+println(a);
+a = 66;
+println(a);
+65
+66
+A
+B
+Pregunta 6
+Operadors bitwise
+
+Executeu el següent codi amb jshell:
+
+4 & 4;
+4 | 4;
+4 ^ 4;
+~4;
+Què retorna en cada cas? Per què?
+
+//TODO
+
+Hint: Per ajudar a visualitzar el què està passant, podeu usar la instrucció intToBin(). Exemple:
+
+intToBin(4);
+intToBin(4 & 4);
+intToBin(12);
+intToBin(4);
+intToBin(4 | 12);
+intToBin(4 & 12);
+boolean bol1 = true;
+boolean bol2 = false;
+println(bol1 || bol2);
+println(bol1 && bol2);
+0000 0000 0000 0000 0000 0000 0000 1100
+0000 0000 0000 0000 0000 0000 0000 0100
+0000 0000 0000 0000 0000 0000 0000 1100
+0000 0000 0000 0000 0000 0000 0000 0100
+true
+false
+Pregunta 7
+Operadors shift
+
+Executeu el seguent codi amb jshell:
+
+4<<2
+4<<28
+4<<29
+4<<30
+4<<31
+Què retorna en cada cas? Per què?
+
+//TODO
+
+Hint: Per ajudar a visualitzar el què està passant, podeu usar la instrucció intToBin(). Exemple:
+
+intToBin(4);
+intToBin(4 << 2);
+Pregunta 8
+Declareu dues variables de tipus char de la següent manera:
+
+char c = 'a', c1 = 1;
+L'objectiu d'aquest exercici és assignar el valor 'b' en una tercera variable de tipus char, però sense usar el literal 'b', sinó fent la suma de les variables c i c1, és a dir:
+
+char c2 = c + c1;
+Què està passant? Com ho podem solucionar per tal d'aconseguir l'objectiu d'aquest exercici?
+
+//TODO
+
+Pregunta 9
+Executa la següent expressió i assigna-la a una variable h:
+
+var h = 4 * 4f + (4.0 + 4);
+Ara, assigna el valor guardat a la variable h, a una altra variable de tipus float:
+
+float f = h;
+Què obtenim? Per què?
+
+//TODO
+
+Ara escriu el canvi que cal fer en l'expressió inicial (4 * 4f + (4.0 + 4)) per tal que l'assignació del valor d'h a f sigui reeixit.
+
+//TODO
+
+Pregunta 10
+A partir de les següents variables i assignacions:
+
+byte b0 = 4, b1 = -4, b2 = 12;
+Executa el següent codi:
+
+boolean bol1 = b0 == b2 / 3;
+boolean bol2 = b0 + b1;
+boolean bol3 = b0 + b1 > b2;
+Explica el resultats obtinguts en cada cas:
+
+//TODO
