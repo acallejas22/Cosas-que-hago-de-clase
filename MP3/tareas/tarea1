@@ -36,6 +36,11 @@ print(r);
 123
 //TODO
 
+- Obtenim com a resultat una variable de tipus byte que és 136, perqué anteriorment hem establit que les variables b0 i b1 eren carácters de tipus byte.
+
+- Obtenim com a resultat una variable de tipus int que és 123, perqué anteriorment hem establit que les variables b0 i b1 eren carácters de tipus long, però 
+  després hem establit que la variable r de tipus int, emmagatzemi el resultat de tipus long convertit a tipus int.
+
 Pregunta 2
 Declara una variable de tipus char anomenada c, i assignali el valor 'a':
 
@@ -46,6 +51,8 @@ int n = c;
 Quin resultat obtens? Per què?
 
 //TODO
+-Obtenim un 97, perqué nosaltres hem establit que la n és una variable de tipus int, però  a la vegada diem que n és igual a una variable de tipus char
+ i un int expressa un char acudint al codi ascii per poder expressar lletres com si fosin números, i la lletra a amb codi ascii és 97.
 
 Ara, declara una variable de tipus short, anomenada s, i assigna-li el valor de la variable c:
 
@@ -53,6 +60,9 @@ short s = c;
 Per què ara el resultat obtingut és diferent que en el cas anterior?
 
 //TODO
+-Dona error.
+-Perqué una variable char permet valors del 0 fin al 255 o del -128 al 127, i la variale short és més amplia, del -32768 al 32767, és a dir, ocupa més 
+ espai.
 
 Pregunta 3
 Continuant amb les variables de tipus char i short declarades a l'exercici 2, ara executeu:
@@ -61,6 +71,10 @@ short s = (short)c;
 Com s'anomena això que estem fent amb la variable c? Quin resultat obtenim ara? Per què (què està passant)?
 
 //TODO
+-S'anomena casting. 
+-Obtenim com a resultat 97 una altra vegada.
+-La variable short utilitza dades numériques com l'integuer, doncsper representar la lletra a de la variable c, ha de recurrir a la taula ascii
+ i veure el número que representa la a, en aquest cas, el 97.
 
 Pregunta 4
 Executa el següent codi en una cel·la del notebook:
@@ -70,6 +84,11 @@ short s = (short)35000;
 Quins resultats obtens? Per què?
 
 //TODO
+-Surt -30536
+-això passa perqué  lavariable shor, només opor ocupar els valors del -32768 al 32767, i la cantitat que estáexigint sobrepassa aquest valors, 
+ doncs per compilar això, el programa de 16 bits quan arriba al límit segueix contant però reiniciant la cadena desdel primer valor que és 
+ -32768 i segueix sumant els valors restants fins a arribar a la suma total dels valors que és -30536, ja que no pot aribar més denllá de 
+ 32767, doncs reinicia la cadena i segueix contant.
 
 La meva resposta és que......
 
@@ -89,13 +108,16 @@ var v0 = 5;
 De quin tipus de dada són les variables v i v0?
 
 //TODO
-
+-V és de tipus double
+-V0 és de tipus integuer
 Ara, executa:
 
 var v1 = v + v0;
 De quin tipus de dada és la variable v1? Per què (què està passant en fer-se la suma)?
 
 //TODO
+-V1 és de tipus float perqué V és un float i V0 és un integuer, doncsel programa posará amb antelació el float, ja que
+ ocupa més rang de valors un float que un integuer.
 
 var b = 65;
 println(b);
