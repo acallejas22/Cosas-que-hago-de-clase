@@ -148,11 +148,14 @@ Retorna 4.
 Aixó passa perquè l'operador & en bitwise, converteix els 2 n'umeros a binari i compara la seva composició en bits. Aixó provoca que 
 l'operador faci una nova linia de bits tenint en conta si els 1 dels numeros comparats coincideixen o no. Si coincideixen, el programa escriurá un 1 en la mateixa posició
 on coincideixen els bits dels 2 nñumeros, si no ho fan, posará un 0, i com el 4 és 00000100, doncs el resultat de la suma binaria será 00000100, és a dir, 4.
+
 Retorna 4.
 En l'operador OR, funciona similar, només que si un bit és 1, ja el programa posará 1 en la posició del byte resultant, peró com torna a ser 4, doncs passa aixó:
-00000100+00000100=00000100-->4
+00000100+00000100=00000100-->4.
+
 Retorna 0.
 L'operador XOR retorna 0 si els bit són iguals i 1 si els bits són diferents, i com la suma és 00000100+00000100=00000000, és a dir, dona 0.
+
 Retorna -5. 
 Aixó es degut a que no s'ha especificat el resultat que vols imprimir, per tant , el programa agafa l'últim resultat, que és -5 i aixó es degut a que 
 el bitwise funciona com els operadors normals però passant el carácter de tipus int amb binari. Ens diu que agafa el número que seleccionem i el converteix en binari.
