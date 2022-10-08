@@ -192,7 +192,11 @@ Executeu el seguent codi amb jshell:
 Què retorna en cada cas? Per què?
 
 //TODO
-
+16
+1073741824
+-2147483648
+0
+0
 Hint: Per ajudar a visualitzar el què està passant, podeu usar la instrucció intToBin(). Exemple:
 
 intToBin(4);
