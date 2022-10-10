@@ -209,8 +209,9 @@ L'objectiu d'aquest exercici és assignar el valor 'b' en una tercera variable d
 
 char c2 = c + c1;
 Què està passant? Com ho podem solucionar per tal d'aconseguir l'objectiu d'aquest exercici?
-
+ Et dona error perquè estás sumant carácters que no són compatibles amb els enters, ja que has establert 2 variables de diferents tipus.
 //TODO
+Has de fer un casting i definir c2 = (char)(c + c1), i així et donará b.
 
 Pregunta 9
 Executa la següent expressió i assigna-la a una variable h:
@@ -222,10 +223,11 @@ float f = h;
 Què obtenim? Per què?
 
 //TODO
-
+Error. Perqué no pots establir una variable float amb un double, ja que el double ocupa més bits que el float, haurás de fer un casting pero convertir el double a float.
 Ara escriu el canvi que cal fer en l'expressió inicial (4 * 4f + (4.0 + 4)) per tal que l'assignació del valor d'h a f sigui reeixit.
 
 //TODO
+var h = (float)(4 * 4f + (4.0 + 4));
 
 Pregunta 10
 A partir de les següents variables i assignacions:
