@@ -241,3 +241,9 @@ boolean bol3 = b0 + b1 > b2;
 Explica el resultats obtinguts en cada cas:
 
 //TODO
+Bol1--> True, perqué l'operador "==" indica comparació igualitaria, i 4 és el mateix que 12/3
+Bol2--> dona error perqué estás definint una variable de tipus boolean amb un resultat de tipus integer i aixó és incompatible
+Bol3--> Dona False perqué 4 + (-4) és igual a 0, i l'operador > indica "ser més gran que", doncs 0 no és més gran que la variable b2 ya que és 12.
+
+
+
