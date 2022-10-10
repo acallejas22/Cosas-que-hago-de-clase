@@ -192,11 +192,20 @@ Executeu el seguent codi amb jshell:
 Què retorna en cada cas? Per què?
 
 //TODO
-16
+
+16 
+Passa el 4 en bits 2 posicions i aixó és 2 elevat a la 4 que dona 16.
 1073741824
--2147483648
+Dona aixó perque passes el 4 en bits 28 vegades i aixó és 2 elevat a la 31 poència, per tant, dona aquest resultat.
+-2147483648 
+El rang máxim y mínim de valors que pot emmagatzemar elshifting és des del  -2147483648 fins al 1073741824, i passant el 4 en bits a la possició 31, dona aquest
+resultat, perqué está tornant a começar a contar.
 0
+Si passes 30 vergades el 4 en bits cap a l'esquerra, es passá del l'imit i no pot contar els bits, ja que s'a passat del sistema hexadecimal.
 0
+Si passes 31 vergades el 4 en bits cap a l'esquerra, es passá del l'imit i no pot contar els bits, ja que s'a passat del sistema hexadecimal.
+
+
 Hint: Per ajudar a visualitzar el què està passant, podeu usar la instrucció intToBin(). Exemple:
 
 intToBin(4);
