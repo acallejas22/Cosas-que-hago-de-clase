@@ -73,7 +73,7 @@ Com s'anomena això que estem fent amb la variable c? Quin resultat obtenim ara?
 //TODO
 -S'anomena casting. 
 -Obtenim com a resultat 97 una altra vegada.
--La variable short utilitza dades numériques com l'integuer, doncsper representar la lletra a de la variable c, ha de recurrir a la taula ascii
+-La variable short utilitza dades numériques com l'integuer, doncs per representar la lletra a de la variable c, ha de recurrir a la taula ascii
  i veure el número que representa la a, en aquest cas, el 97.
 
 Pregunta 4
@@ -85,7 +85,7 @@ Quins resultats obtens? Per què?
 
 //TODO
 -Surt -30536
--això passa perqué  lavariable shor, només opor ocupar els valors del -32768 al 32767, i la cantitat que estáexigint sobrepassa aquest valors, 
+-això passa perqué  lavariable short, només pot ocupar els valors del -32768 al 32767, i la cantitat que está exigint sobrepassa aquest valors, 
  doncs per compilar això, el programa de 16 bits quan arriba al límit segueix contant però reiniciant la cadena desdel primer valor que és 
  -32768 i segueix sumant els valors restants fins a arribar a la suma total dels valors que és -30536, ja que no pot aribar més denllá de 
  32767, doncs reinicia la cadena i segueix contant.
@@ -145,7 +145,7 @@ Què retorna en cada cas? Per què?
 
 //TODO
 Retorna 4.
-Aixó passa perquè l'operador & en bitwise, converteix els 2 n'umeros a binari i compara la seva composició en bits. Aixó provoca que 
+Aixó passa perquè l'operador & en bitwise, converteix els 2 números a binari i compara la seva composició en bits. Això provoca que 
 l'operador faci una nova linia de bits tenint en conta si els 1 dels numeros comparats coincideixen o no. Si coincideixen, el programa escriurá un 1 en la mateixa posició
 on coincideixen els bits dels 2 nñumeros, si no ho fan, posará un 0, i com el 4 és 00000100, doncs el resultat de la suma binaria será 00000100, és a dir, 4.
 
