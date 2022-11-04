@@ -3,3 +3,21 @@
     border: solid red 5px;
    
 }
+
+/*Ex-EPHTML*/
+
+.classdiv{
+    background-color: grey;
+    width: 100%;
+    height: 48px;
+    border: 2px solid black;
+    float: left;
+    /*padding: 20px;*/
+    margin: 5px;
+    border-radius: 8px;
+}
+
+#section, #aside{
+    width: 48%;
+    height: 200px;
+}
