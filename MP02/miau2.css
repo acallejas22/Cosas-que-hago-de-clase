@@ -21,3 +21,62 @@
     width: 48%;
     height: 200px;
 }
+
+#article{
+    width: 90%;
+    height: 30px;
+}
+
+.shadow{
+    text-shadow: 2px 2px 6px rgb(190, 34, 23);
+    font-family: cursive;
+}
+
+a:visited{
+    color: rgb(212, 183, 14);
+}
+
+a:link{
+    color: black;
+    border: 2px solid black;
+}
+
+a:hover, div:hover{
+    color: green;
+    border: 2px solid green;
+    opacity: 0.5;
+}
+
+a:active{
+    color: red;
+    border: 2px solid red;
+}
+
+a{
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#section div{
+    background-color: yellow;
+}
+
+p#p4::first-letter{
+    font-size: 40px;
+
+
+
+}
+
+a[href="https://miau32.wixsite.com/miaufanzara-2016/about"]{
+    background-color: black;
+    text-decoration: none;
+    display: block;
+    width:80%;
+    height: 100px;
+    border: 2px solid black;
+    float:left;
+    text-align: center;
+    padding-top: 90px ;
+}
