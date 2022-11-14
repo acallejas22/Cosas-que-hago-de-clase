@@ -1,0 +1,13 @@
+Arrays:
+Son de tamaño fijo desde el momento en que creas el array.
+Si creas el array sin asignarle valores, este se creara con los valores por defecto del tipo de dato declarado del array.
+No se pueden mezclar diferentes tipos de datos en un array.
+Un array es un tipo de dato que a su vez es manejado por otro tipo de dato declarado, ya sea string, int, duble, etc.
+Un array guarda la direcion de memoria donde se ha reservado el espacio de memoria.
+El array reservará el espacio de memoria de la variable declarada del array, es decir, si quieres 4 variables int, tendrñás en cuenta que el int ocupa 4 bytes por lo tanto,
+el array reservará 16 bytes(4 bytes de cada int * 4 ints).
+Los valores del array se acceden con un indice que comienza por 0.
+EJ: int array ={1,2,3}-->  el indice 0 es el 1, el indice 2 es el 3.
+El ultimo indice es la medida del array - 1.
+cuando accedes a una posicion del array que no existe(fuera de los limites del array), te saldrá este error --> mensaje de error: array index out of bounds exception
+Valor por defecto de intr es 0, valor por defecto del string es NULL(ausencia de valor).
