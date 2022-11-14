@@ -1,5 +1,16 @@
 from Bio import SeqIO
 #from Bio import Entrez
+def  compte(cadena):
+    counterAA = 0
+    counterCC = 0
+    counterGG = 0
+    counterTT = 0
+    for i in cadena:
+        if i =="A":
+            counterAA +=1
+    return counterAA, counterCC, counterGG, counterTT
+
+print("-------------------------------")
 
 
 for seq_record in SeqIO.parse("sequence3.fasta",  "fasta"):
@@ -12,6 +23,13 @@ for seq_record in SeqIO.parse("sequence3.fasta",  "fasta"):
     print(seq_record.seq)
     complementaria = seq_record.seq.complement()
     print(complementaria)
+    #a,c,g,t = compte(seq_record.seq)
+    #acom = compte(complementaria)
+    # print(a,c,g,t, acom)
+    arn = complementaria.transcribe()
+    print(arn)
+    protein = arn.translate()
+    print(protein)
 
     counterA = 0
     counterT = 0
@@ -68,6 +86,12 @@ elif counterG == counterc:
         print("G y c tan bien")
 else:
     print("G y c y C y g tan mal")
+
+
+
+
+
+
 
 
 
