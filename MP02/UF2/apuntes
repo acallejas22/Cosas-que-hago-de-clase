@@ -1,0 +1,33 @@
+dATA DEFINITION LANGUAGE
+CREATE: Se utiliza para crear datos.
+ALTER: Para cambiar las propiedades.
+DROP: Borra todos los registros de la tabla  y su estructura.
+RENAME: Renombra una tabla o una entidad.
+TRUNCATE: Quita todas las filas de una tabla, pero permanecen la estructura y sus columnas, las restricciones, los índices, etc.
+COMMENT: para especificar o sustituir un comentario respecto a un objeto. 
+
+DATA QUERY LANGUAGE
+SELECT: s¡Se usa para especificar los nombres de los campos que contienen los datos que quiere usar en una consulta.
+
+DATA MANIULATION LANGUAGE
+INSERT: Añadir datos a una tabla.
+UPDATE: Actualiza la tabla.
+DELETE: 
+MERGE:
+CALL:
+EXPLAIN PLAN:
+LOCK TABLE:
+
+DATA CONTROL LANGUAGE
+GRANT:
+REVOKE:
+
+
+Tipo de datos
+Numéricos(2, 4, 8 Bytes)
+Monetarios(4 Bytes)
+Carácteres(Longitud variable, Ilimitado)
+Data/hora(4, 8, 12 Bytes)
+Binario/boolean(4/1 Bytes)
+Geométrico(16, 24, 32, 16+16n, 40+16n Bytes)
+Direcciones de red(6, 12, 24 Bytes)
