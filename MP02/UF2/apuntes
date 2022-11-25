@@ -12,8 +12,8 @@ SELECT: s¡Se usa para especificar los nombres de los campos que contienen los d
 DATA MANIULATION LANGUAGE
 INSERT: Añadir datos a una tabla.
 UPDATE: Actualiza la tabla.
-DELETE: 
-MERGE:
+DELETE: Borrar una tabla.
+MERGE: Sincroniza los datos de un origen establecido a una tabla destino.
 CALL:
 EXPLAIN PLAN:
 LOCK TABLE:
