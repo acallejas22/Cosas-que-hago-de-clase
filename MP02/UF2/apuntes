@@ -14,13 +14,13 @@ INSERT: Añadir datos a una tabla.
 UPDATE: Actualiza la tabla.
 DELETE: Borrar una tabla.
 MERGE: Sincroniza los datos de un origen establecido a una tabla destino.
-CALL:
-EXPLAIN PLAN:
-LOCK TABLE:
-
+CALL: LLamar a un procedimiento almacenado.
+EXPLAIN PLAN: Mostrar un plan de ejecución de consultas.
+LOCK TABLE: Bloquear una tabla.
+ 
 DATA CONTROL LANGUAGE
-GRANT:
-REVOKE:
+GRANT: Otorgar privilegios.
+REVOKE: Revocar privilegios.
 
 
 Tipo de datos
@@ -31,3 +31,5 @@ Data/hora(4, 8, 12 Bytes)
 Binario/boolean(4/1 Bytes)
 Geométrico(16, 24, 32, 16+16n, 40+16n Bytes)
 Direcciones de red(6, 12, 24 Bytes)
+
+
