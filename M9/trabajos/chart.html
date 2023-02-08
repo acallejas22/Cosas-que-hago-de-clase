@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./chart.css">
+    <title>Gráficas</title>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>    
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Consumo', 'Porciento'],
+          ['cocacola',     55],
+          ['pepsi',     35],
+          ['sprite',  10]
+        ]);
+         var options = {
+          title: 'Mi consumo de cocacola, pepsi y sprite',
+          is3D: true,};
+         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+         chart.draw(data, options);
+        } 
+    </script>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:['corechart']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+        function drawStuff() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Country');
+          data.addColumn('number', 'GDP');
+          data.addRows([
+            ['US', 16768100],
+            ['China', 9181204],
+            ['Japan', 4898532],
+            ['Germany', 3730261],
+            ['France', 2678455]
+          ]);
+
+         var options = {
+           title: 'GDP of selected countries, in US $millions',
+           width: 500,
+           height: 400,
+           legend: 'none',
+           bar: {groupWidth: '95%'},
+           vAxis: { gridlines: { count: 4 } }
+         };
+
+         var chart = new google.visualization.ColumnChart(document.getElementById('number_format_chart'));
+         chart.draw(data, options);
+
+         document.getElementById('format-select').onchange = function() {
+           options['vAxis']['format'] = this.value;
+           chart.draw(data, options);
+         };
+      };
+    </script>
+
+
+</head>
+<body>
+<div class="main"><h1 class="title">Práctica gráficas M9</h1></div>
+<div class="row">
+    <div id="flex" class="grafica1">
+        <div><img class="img1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPkAAADLCAMAAACbI8UEAAAAvVBMVEX/////u3HGufyK8oH/hILz8/Pl5eXZ2dnb29sAAAD8/Pzp6env7+//t2f/uGr/69j/27jCtPwwMDD28//Z0P2A8Xb7//uj9Z3/gH7r3c+9suve7t3rr67fo2Gtod3fcnB31G//jo3o078ZGRne2tX/tF7uyaTc3uDY1uDHwOb04Mz407Do5vHPx/Tl5eLf7N7T0NzS19Lfzr3fwKFv02aO1onffHpmZmYREhMmJiarq6txcnLHx8dHR0c4ODjum26UAAACtklEQVR4nO3c21LbMBCAYQONk9iBlpRTj9ACdYAWSk9QSvv+j8WMLvAGhpVtVZIT/f9dhoXxh8PFToyyjIiIiIhoWcsXusJBPi4GC5zLPR+7fPNChzy9kKcX8vRCnl7I0wt5eiUsz4d1R6/UjoZ9y2k/ly+eH68rHb9w/C33q3n5+orSBvLlCLkJOXLkyGNdpJeQm5AjR4481kV6aW4//7ihyj9F28Of6v/t50ndc/kCOXLkyGNdpJeQm5AjR4481kV6CbkpMXlxn11e9CwneT66r7Lt59WoX7Gfdwq5CTly5MhjXaSXkJuQI0eOPNZFeilludh2W+3nlh/c//28rNfdVvv57LXaSZAFPcp+/nJzVWlzy+GawuRJvoq8vyE3IUeOHLmcRY4cOfKwjA4lLC8mdaf6lnomRiefdfmXSYic5IOyziYXo6VNXoaoh/v5Irzb5QvkyJEjl7PIkSNHHpbRIeQm5MiXWz4Rh4LbPkWWB4jPLFvquRx+o3YR5xTzTBwKfqrf8zN5gLhlP9+aO218e01pezf+Kea+3u07qnxt1wXQOeQm5MiRI5ezyJEjRy5nkSNPR571Ut75KW/bfi5+7sgi7/zf3W77uXhQ3nbP5UP1tnu+I2Zt7/Y4T/bLF/ydI0eOXM4iR44cuZxFjhw58hDQRyW8n1fiUPA2p5h/teznl2L20iKfO5n8rV78U8y93fM9tQ8O1gjyVn/ne8+0kCNHjhw5cuTIkSNHru9qgTaWUPKyqvv2Tu27GB3N3qudnMvhHwdaP8Vole+r/ZKzTp8iX02f7ve18sWHs2M/s1Nt9trpMW/lw+mbP43Pt8tu/zafHU4bH5yXldOBdomeurlqPnv7r/ns8LD5bHnodF87NihbzObNZwtPs0RERERERERERERERERERERERERERNTf7gA+lfeer7YfjAAAAABJRU5ErkJggg==">
+        </div>
+        <div><img class="img2" src="https://cdn.exceltotal.com/wp-content/uploads/2012/10/como-agregar-lineas-horizontales-a-un-grafico-de-excel-01.png">
+        </div>
+        <div id="piechart"></div>
+    </div>
+    <div class="grafica2">
+        <div id="number_format_chart"class="barras"></div>
+        <iframe class="mapa" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQypVz54IOW9nSakXbpdSLSzooYUE9qqCzJtOWbooWPIikgwgrw-DllW_jp51tXDTRxZ73aiRALkdu8/pubchart?oid=486362498&format=interactive" style="height: 400px; width: 700px;"></iframe>
+    </div>
+</div>
+</body>
+</html>
