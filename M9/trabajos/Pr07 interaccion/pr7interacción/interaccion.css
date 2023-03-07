@@ -1,0 +1,114 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+html{
+    height: 100%;
+}
+
+
+h1.header{
+    width: 100%;
+    text-align: center;
+    background: rgb(141, 0, 0);
+}
+
+div.footer h1{
+    text-align: center;
+    width: 100%;
+    background: rgb(141, 0, 0);
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.menu h2{
+    padding: 10px;
+}
+
+
+div.practicagif .gif{
+    display: flex;
+    flex-wrap: wrap;
+    width: 405px;
+    height: 405px;
+    margin: 10px;
+}
+
+div.practicagif{
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+
+div.pepsiman{
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+
+div.genially{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+video{
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+    height: 300px;
+    filter: grayscale(100%);
+}
+
+iframe.app{
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    height: 700px;
+}
+
+.vacio{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: absolute;
+    width: 500px;
+    height: 900px;
+    float: right;
+    z-index: 1;
+    margin-left: 900px;
+    transition: 1s;
+}
+
+
+
+
+.deku:hover ~ div.vacio {
+    background: url(./media/midoryia.png) no-repeat; 
+    background-size: 100%; 
+    z-index: 1;
+}
+.bakugou:hover ~ div.vacio {
+    background: url(./media/bakugou.png) no-repeat; 
+    background-size: 100%; 
+}
+.kirishima:hover ~ div.vacio {
+    background: url(./media/kirishima.png) no-repeat; 
+    background-size: 100%; 
+}
+.allmight:hover ~ div.vacio {
+    background: url(./media/allmight.png) no-repeat; 
+    background-size: 100%; 
+}
+
+
+
+
