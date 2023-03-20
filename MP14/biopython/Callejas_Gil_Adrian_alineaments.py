@@ -1,7 +1,8 @@
 import Bio
 from Bio.Seq import Seq
 from Bio import SeqIO
-
+from Bio import pairwise2
+from Bio.pairwise2 import format_alignment
 
 
 def alinea(cadena1,cadena2):
@@ -53,3 +54,13 @@ with open("informe.txt", "w") as fitxer:
         fitxer.write("---------------------------\n")
     fitxer.write("EL MILLOR ALINEAMENT ES ENTRE: " + cadenamaxim1 + " i " + cadenamaxim2 + "\n")
     fitxer.write("EL MILLOR ALINEAMENT TE: " + str(maxim) + "punts" + "\n")
+    with open("iforme.txt", "w") as fitxer2:
+        for i in range(len(claus)):
+            for j in range(i + 1, len(claus)):
+                fitxer2.write("alineaments entre: " + claus[i] + " i " + claus[j] + "\n")
+                fitxer2.write("-----------------------------------------------\n")
+                fitxer2.write("-----------------------------------------------\n")
+                aligments = pairwise2.align.globalxx(diccionari[claus[i]], diccionari[claus[j]])
+
+                for aligment in aligments:
+                    fitxer2.write(format_alignment(*alignment))
