@@ -56,7 +56,32 @@
             </li>
 }</ol>
 
- 
+ ------------------------------------------------------------
+ <table border = '1'>
+	<tr>
+     <th>Alumno</th>
+     <th>Título</th>
+     <th>Duracion</th>
+     <th>Fecha</th>
+     <th>Direcor</th>
+     <th>Genero</th>
+     <th>Reparto</th>
+    </tr>{
+	let $pelis := //pelicula
+    for $p in $pelis
+    order by $p/@alumno
+    return	<tr>
+    		 <td>{data($p/@alumno)}</td>
+             <td>{data($p/titulo)}</td>
+             <td>{data($p/duracion)}</td>
+             <td>{data($p/fecha)}</td>
+             <td>{data($p/director)}</td>
+             <td>{data($p/genero)}</td>
+             <td>{data($p/reparto)}</td>
+             <td>{lower-case(concat(substring($p/@alumno,1,1),substring(substring-after($p/@alumno,' '),1,5),data($p/fecha),'@email.me'))}</td>
+            </tr>
+}</table>
+
  
  
  
