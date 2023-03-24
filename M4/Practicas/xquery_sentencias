@@ -35,3 +35,32 @@
             </li>
 }</ul>
  
+ --------------------------------------------------------------
+ 
+ <ul>{
+  let $pelis := //pelicula
+  for $p in $pelis
+  where $p/fecha > 2010
+  return	<li>
+  			{concat($p/titulo, ' - ', $p/@alumno, ' - ', $p/fecha)}	
+            </li>
+}</ul>,
+ 
+<ol>{
+  let $pelis := //pelicula
+  for $p in $pelis
+  where $p/fecha >= 2010
+  order by $p/fecha
+  return	<li>
+  			{concat($p/titulo, ' - ', $p/@alumno, ' - ', $p/fecha)}	
+            </li>
+}</ol>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
