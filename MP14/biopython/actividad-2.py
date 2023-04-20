@@ -4,7 +4,6 @@ from Bio import Entrez
 
 Entrez.email = 'acallejas22@ilg.cat'
 
-"""----------El código no está terminado---------"""
 with open("NM_000900.5.fasta", "w") as fitxer:
     handle = Entrez.efetch(db="nucleotide", id="NM_000900.5", rettype="fasta", retmode="text")
     fitxer.write(handle.read())
