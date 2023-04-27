@@ -49,8 +49,6 @@ with open("resultat.txt", "w") as fitxer:
                     cds = feature1.location.extract(rec3).seq[:150]
                     arn = cds.transcribe()
                     aa = arn.translate()
-            print(str(contador1))
-            print(aa)
     with open("Mus_musculus.gb", "w") as fitxer3:
         handle2 = Entrez.efetch(db="nucleotide", id="NM_001324522.1", rettype="gb", retmode="text")
         for rec2 in SeqIO.parse(handle2, "genbank"):
@@ -62,8 +60,6 @@ with open("resultat.txt", "w") as fitxer:
                     cds2 = feature2.location.extract(rec2).seq[:150]
                     arn2 = cds2.transcribe()
                     aa2 = arn2.translate()
-            print(str(contador2))
-            print(str(aa2))
     fitxer.write("Les cadenes d'aminoacids de l'homo sapiens i el mus musculis son: " + "\n")
     fitxer.write("------" + "\n")
     fitxer.write(str(aa) + "\n")
@@ -74,7 +70,6 @@ with open("resultat.txt", "w") as fitxer:
     cadena = ""
     fitxer.write("----------------------------------------------------------" + "\n")
     fitxer.write("El percentatje de similitut del seus aminoacids es: " + (str((alinea(aa,aa2)*100)/50)) + "%" + "\n")
-
 
 
 
