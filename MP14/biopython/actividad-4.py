@@ -3,82 +3,79 @@ from Bio.Seq import Seq
 from Bio import Entrez
 
 Entrez.email = 'acallejas22@ilg.cat'
-diccionario = {}
 
 
 
-"""--------------------- Código no completado ----------------------"""
+def CountExon(handle):
 
-
-
-
-
-
-""" Moléculas: NM_001190839.3, XM_003816517.4, XM_520764.6, NM_000900.5"""
-
-
-
-
-
-with open("XM_520764.6.gb", "w") as fitxer:
-    handle = Entrez.efetch(db="nucleotide", id="NM_001190839.3, XM_003816517.4, XM_520764.6, NM_000900.5", rettype="gb", retmode="text")
-    record = Entrez.read(handle)
-    fitxer.write(handle.read())
-
-with open("resultatgb.txt", "w") as fitxer:
-    with open("XM_520764.6.gb", "r") as fitxergb:
-        for rec in SeqIO.parse(fitxergb, "gb"):
-            fitxer.write(rec.id)
-            for feature in rec.features:
-                if feature.type == "CDS":
-                    cadena = feature.qualifiers['translation']
-                    #print(cadena[0])
-                    print(feature.qualifiers['translation'][0])
+    for rec3 in SeqIO.parse(handle, "genbank"):
+        contador1 = 0
+        for feature1 in rec3.features:
+            if feature1.type == "exon":
+                contador1 += 1
+        print(contador1)
+        return contador1
 
 def alinea(cadena1,cadena2):
+    lenght = 50
+    #cambia el tamaño si el array es mas pequeño que el limite de 50
+    if len(cadena1) < lenght:
+        lenght = len(cadena1)
+    elif len(cadena2) < lenght:
+        lenght = len(cadena2)
+
     valor = 0
-    for i in range(len(cadena1)):
+    for i in range(lenght):
         if cadena1[i] == cadena2[i]:
             valor += 1
         else:
             valor -= 1
     return valor
+#compare
 
-def parsegar(cadena,diccionario):
-    for req in SeqIO.parse(cadena, "fasta"):
-        handle = Entrez.efetch(db="nucleotide", id=req.id, rettype="gb", retmode="text")
-        for rec in SeqIO.parse(handle, "genbank"):
-            contador=0
-            for feature in rec.features:
-                if feature.type == "exon":
-                    contador +=1
-                if feature.type == "CDS":
-                    cds = feature.location.extract(rec).seq[:150]
+
+
+aa = ""
+aa2 = ""
+with open("resultat.txt", "w") as fitxer:
+    with open("Homo_sapiens.gb", "w") as fitxer2:
+        handle = Entrez.efetch(db="nucleotide", id="NM_001354619.2", rettype="gb", retmode="text")
+        for rec3 in SeqIO.parse(handle, "genbank"):
+            contador1 = 0
+            for feature1 in rec3.features:
+                if feature1.type == "exon":
+                    contador1 += 1
+                if feature1.type == "CDS":
+                    cds = feature1.location.extract(rec3).seq[:150]
                     arn = cds.transcribe()
                     aa = arn.translate()
-                    diccionario[req.id] = aa
+            print(str(contador1))
+            print(aa)
+    with open("Mus_musculus.gb", "w") as fitxer3:
+        handle2 = Entrez.efetch(db="nucleotide", id="NM_001324522.1", rettype="gb", retmode="text")
+        for rec2 in SeqIO.parse(handle2, "genbank"):
+            contador2 = 0
+            for feature2 in rec2.features:
+                if feature2.type == "exon":
+                    contador2 += 1
+                if feature2.type == "CDS":
+                    cds2 = feature2.location.extract(rec2).seq[:150]
+                    arn2 = cds2.transcribe()
+                    aa2 = arn2.translate()
+            print(str(contador2))
+            print(str(aa2))
+    fitxer.write("Les cadenes d'aminoacids de l'homo sapiens i el mus musculis son: " + "\n")
+    fitxer.write("------" + "\n")
+    fitxer.write(str(aa) + "\n")
+    fitxer.write(str(aa2) + "\n")
+    fitxer.write("----------------------------------------------------------" + "\n")
+    fitxer.write("L'homo sapiens te: " + str(contador1) + " exons" + "\n")
+    fitxer.write("El mus musculus te: " + str(contador2) + " exons" + "\n")
+    cadena = ""
+    fitxer.write("----------------------------------------------------------" + "\n")
+    fitxer.write("El percentatje de similitut del seus aminoacids es: " + (str((alinea(aa,aa2)*100)/50)) + "%" + "\n")
 
 
-with open("brca2.fasta", "w") as resultats:
-    for i in record["IdList"]:
-        handle = Entrez.efetch(db="nucleotide", id=i, rettype="fasta")
-        resultats.write(handle.read())
-        parsegar("brca2.fasta", diccionario)
 
 
 
-maxim = 0
-cadenamaxim1 = ""
-cadenamaxim2 = ""
-claus = list(diccionario.keys())
-with open("informe.txt", "w") as fitxer:
-    for i in range(len(claus)):
-        fitxer.write(" treballem amb " + claus[i]  + "\n")
-        fitxer.write("---------------------------\n")
-        for j in range(i + 1, len(claus)):
-            valor = alinea(diccionario[claus[i]], diccionario[claus[j]])
-            fitxer.write(str(valor) + " punts amb " + claus[j] + ": \n")
-            if valor <= maxim:
-                maxim = valor
-                cadenamaxim1 = claus[i]
-                cadenamaxim2 = claus[j]
