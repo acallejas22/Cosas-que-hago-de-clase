@@ -16,29 +16,29 @@ def CountExon(handle):
         print(contador1)
         return contador1
 
-def alinea(cadena1,cadena2):
-    lenght = 50
-    #cambia el tamaño si el array es mas pequeño que el limite de 50
-    if len(cadena1) < lenght:
-        lenght = len(cadena1)
-    elif len(cadena2) < lenght:
-        lenght = len(cadena2)
+def alinea(cadena1,cadena2): #comparo las cadenas de aminoacidos que he almacenado
+    length = 50
+
+    if len(cadena1) < length:
+        length = len(cadena1)
+    elif len(cadena2) < length:
+        length = len(cadena2)
 
     valor = 0
-    for i in range(lenght):
+    for i in range(length):
         if cadena1[i] == cadena2[i]:
             valor += 1
         else:
             valor -= 1
     return valor
-#compare
+
 
 
 
 aa = ""
 aa2 = ""
 with open("resultat.txt", "w") as fitxer:
-    with open("Homo_sapiens.gb", "w") as fitxer2:
+    with open("Homo_sapiens.gb", "w") as fitxer2: #encuentros los aminoácidos del homo sapiens y cuento sus exones
         handle = Entrez.efetch(db="nucleotide", id="NM_001354619.2", rettype="gb", retmode="text")
         for rec3 in SeqIO.parse(handle, "genbank"):
             contador1 = 0
@@ -49,7 +49,7 @@ with open("resultat.txt", "w") as fitxer:
                     cds = feature1.location.extract(rec3).seq[:150]
                     arn = cds.transcribe()
                     aa = arn.translate()
-    with open("Mus_musculus.gb", "w") as fitxer3:
+    with open("Mus_musculus.gb", "w") as fitxer3: #encuentros los aminoácidos del mus musculus y cuento sus exones
         handle2 = Entrez.efetch(db="nucleotide", id="NM_001324522.1", rettype="gb", retmode="text")
         for rec2 in SeqIO.parse(handle2, "genbank"):
             contador2 = 0
