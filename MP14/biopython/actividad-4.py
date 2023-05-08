@@ -38,8 +38,8 @@ def alinea(cadena1,cadena2): #comparo las cadenas de aminoacidos que he almacena
 aa = ""
 aa2 = ""
 with open("resultat.txt", "w") as fitxer:
-    with open("Homo_sapiens.gb", "w") as fitxer2: #encuentros los aminoácidos del homo sapiens y cuento sus exones
-        handle = Entrez.efetch(db="nucleotide", id="NM_001354619.2", rettype="gb", retmode="text")
+    with open("Homo_luzonensis.gb", "w") as fitxer2: #encuentros los aminoácidos del homo sapiens y cuento sus exones
+        handle = Entrez.efetch(db="nucleotide", id="JAFELL010000279", rettype="gb", retmode="text")
         for rec3 in SeqIO.parse(handle, "genbank"):
             contador1 = 0
             for feature1 in rec3.features:
@@ -49,8 +49,8 @@ with open("resultat.txt", "w") as fitxer:
                     cds = feature1.location.extract(rec3).seq[:150]
                     arn = cds.transcribe()
                     aa = arn.translate()
-    with open("Mus_musculus.gb", "w") as fitxer3: #encuentros los aminoácidos del mus musculus y cuento sus exones
-        handle2 = Entrez.efetch(db="nucleotide", id="NM_001324522.1", rettype="gb", retmode="text")
+    with open("Homo_sapiens.gb", "w") as fitxer3: #encuentros los aminoácidos del mus musculus y cuento sus exones
+        handle2 = Entrez.efetch(db="nucleotide", id="CAAGRJ010006848", rettype="gb", retmode="text")
         for rec2 in SeqIO.parse(handle2, "genbank"):
             contador2 = 0
             for feature2 in rec2.features:
@@ -60,17 +60,16 @@ with open("resultat.txt", "w") as fitxer:
                     cds2 = feature2.location.extract(rec2).seq[:150]
                     arn2 = cds2.transcribe()
                     aa2 = arn2.translate()
-    fitxer.write("Les cadenes d'aminoacids de l'homo sapiens i el mus musculis son: " + "\n")
+    fitxer.write("Les cadenes d'aminoacids de l'homo luzonensis i l'homo sapiens  son: " + "\n")
     fitxer.write("------" + "\n")
     fitxer.write(str(aa) + "\n")
     fitxer.write(str(aa2) + "\n")
     fitxer.write("----------------------------------------------------------" + "\n")
-    fitxer.write("L'homo sapiens te: " + str(contador1) + " exons" + "\n")
-    fitxer.write("El mus musculus te: " + str(contador2) + " exons" + "\n")
+    fitxer.write("L'homo luzonensis te: " + str(contador1) + " exons" + "\n")
+    fitxer.write("L'homo sapiens te: " + str(contador2) + " exons" + "\n")
     cadena = ""
     fitxer.write("----------------------------------------------------------" + "\n")
     fitxer.write("El percentatje de similitut del seus aminoacids es: " + (str((alinea(aa,aa2)*100)/50)) + "%" + "\n")
-
 
 
 
